@@ -64,7 +64,7 @@ function inputHandlerMethod(e) {
 	
 	var i;
 	var stringResult = "<ul style='margin-bottom:0px;'>"
-	for (i = 0; i < results_calculated.length; i++) {
+	for (i = 0; i < results_calculated.length && i < 10; i++) {
 			stringResult += "<li>";
 		stringResult += results_calculated[i]["name"];
 			stringResult += "</li>";
