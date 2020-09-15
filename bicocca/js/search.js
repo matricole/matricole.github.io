@@ -58,7 +58,7 @@ function inputHandlerMethod(e) {
 	var results_calculated = calculateResults(inputtext_words, json_global);
 	if (results_calculated == null || results_calculated.length == 0)
 	{	
-		result.innerHTML = "Nessun risultato! " + inputtext_words.length;  
+		result.innerHTML = "&nbsp;<img src='../img/x.png' style='width: 0.8rem;padding-bottom: 0.25rem;' />&nbsp;&nbsp;Nessun risultato!";  
 		return;
 	}
 	
