@@ -126,6 +126,21 @@ function inputHandlerMethod(e) {
 	for (i = 0; i < results_calculated.length && i < 10; i++) {
 			stringResult += "<li>";
 			stringResult += "<a href='"+results_calculated[i]["id_link"]+"'>";
+			var img_type = "";
+			if (results_calculated[i]["id_link"].includes("t.me/"))
+			{
+				img_type = "tg";
+			}
+			else if (results_calculated[i]["id_link"].includes("whatsapp.com/"))
+			{
+				img_type = "wa";
+			}
+			else if (results_calculated[i]["id_link"].includes("facebook.com/"))
+			{
+				img_type = "fb";
+			}
+			
+			stringResult += "<img src='../img/"+img_type+".svg' style='width: 1rem;' />&nbsp;&nbsp;";
 		stringResult += results_calculated[i]["nomecorso"];
 			stringResult += "</a>";
 			stringResult += "</li>";
